@@ -3,11 +3,11 @@
 	import Navbar from '../components/Navbar.svelte';
 </script>
 
-<div class="content">
+<div class="content max-w-xl mx-auto">
 	<Navbar />
 	<slot />
 </div>
-<div class="footer">
+<div class="footer mx-auto">
 	<Footer />
 </div>
 
