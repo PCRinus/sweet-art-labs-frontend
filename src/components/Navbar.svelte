@@ -1,4 +1,4 @@
-<div class="flex justify-between">
+<div class="flex justify-between mb-8">
 	<a href="/">Sweet Art Labs Logo</a>
 	<div id="buttons">
 		<a href="/prajituri" class="mx-2">Prajituri</a>
