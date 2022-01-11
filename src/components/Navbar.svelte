@@ -1,5 +1,7 @@
-<h1>
-	Laborum duis laboris incididunt exercitation ipsum minim proident ex sint voluptate. Labore dolore
-	enim veniam aliqua culpa duis consequat anim irure pariatur deserunt. Id aliqua ullamco
-	exercitation non duis.
-</h1>
+<div class="flex justify-between">
+	<a href="/">Sweet Art Labs Logo</a>
+	<div id="buttons">
+		<a href="/prajituri" class="mx-2">Prajituri</a>
+		<a href="/contact" class="mx-2">Contact</a>
+	</div>
+</div>
