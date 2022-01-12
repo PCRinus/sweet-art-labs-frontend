@@ -13,7 +13,7 @@
 
 <script>
 	export let aboutUsData;
-	const { heading, description } = aboutUsData.res.data.attributes;
+	const { heading, description } = aboutUsData.result.data.attributes;
 </script>
 
 <h1>{heading}</h1>

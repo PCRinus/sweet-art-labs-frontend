@@ -16,7 +16,9 @@
 	<h1>{name}</h1>
 	<h2>{price} lei/{unit}</h2>
 	<div class="flex -mx-2 mt-2" id="button-container">
-		<Primary>Vezi detalii</Primary>
+		<Primary>
+      <a href={`/prajituri/${id}`}>Vezi detalii</a>
+    </Primary>
 		<Secondary>Adauga in cos</Secondary>
 	</div>
 	id: {id}
