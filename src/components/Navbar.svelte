@@ -1,7 +1,9 @@
-<div class="flex justify-between mb-8">
-	<a href="/">Sweet Art Labs Logo</a>
-	<div id="buttons">
-		<a href="/prajituri" class="mx-2">Prajituri</a>
-		<a href="/contact" class="mx-2">Contact</a>
+<nav class="p-6">
+	<div class="max-w-5xl mx-auto flex justify-between">
+		<a href="/">Sweet Art Labs Logo</a>
+		<div id="buttons">
+			<a href="/prajituri" class="mx-2">Prajituri</a>
+			<a href="/contact" class="mx-2">Contact</a>
+		</div>
 	</div>
-</div>
+</nav>

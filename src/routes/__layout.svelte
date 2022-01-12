@@ -9,10 +9,12 @@
 	<title>Sweet Art Labs</title>
 </svelte:head>
 
-<div class="content p-8 max-w-6xl mx-auto xl:text-2xl lg:text-xl md:text-lg sm:text-base">
-	<div class="upper-content">
-		<Navbar />
-		<slot />
+<div class="content xl:text-2xl lg:text-xl md:text-lg sm:text-base">
+	<Navbar />
+	<div class="upper-content p-6">
+		<div class="max-w-5xl mx-auto">
+			<slot />
+		</div>
 	</div>
 	<Footer />
 </div>
@@ -26,19 +28,19 @@
 		@apply bg-powderBlue-300;
 	}
 
-  :global(html, body, #svelte, .content) {
-    height: 100%;
-  }
+	:global(html, body, #svelte, .content) {
+		height: 100%;
+	}
 
-  .content {
-    display: flex;
-    flex-direction: column;
-  }
-  .upper-content {
-    flex: 1 0 auto;
-  }
+	.content {
+		display: flex;
+		flex-direction: column;
+	}
+	.upper-content {
+		flex: 1 0 auto;
+	}
 
-  :global(.footer) {
-    flex-shrink: 0;
-  }
+	:global(.footer) {
+		flex-shrink: 0;
+	}
 </style>
