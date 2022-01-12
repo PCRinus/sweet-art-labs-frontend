@@ -25,7 +25,7 @@
 	@tailwind utilities;
 
 	:global(body) {
-		@apply bg-powderBlue-300;
+		@apply bg-neutral-50;
 	}
 
 	:global(html, body, #svelte, .content) {
