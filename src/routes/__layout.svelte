@@ -24,6 +24,12 @@
 	@tailwind components;
 	@tailwind utilities;
 
+	@layer base {
+		html {
+			-webkit-tap-highlight-color: transparent;
+		}
+	}
+
 	:global(body) {
 		@apply bg-neutral-50;
 	}
