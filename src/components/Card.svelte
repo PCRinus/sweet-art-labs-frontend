@@ -1,13 +1,20 @@
 <script>
+	import { variables } from '$lib/variables';
 	import Primary from './Buttons/Primary.svelte';
 	import Secondary from './Buttons/Secondary.svelte';
 
 	export let cardData;
+
+	let { name, price, unit, image } = cardData.attributes;
+	let thumbnailUrl = `${variables.basePath}${image.data[0].attributes.formats.thumbnail.url}`;
+	console.log(thumbnailUrl);
 </script>
 
 <div class="bg-slate-200 border rounded-sm p-2">
-	<h1>{cardData.name}</h1>
-	<h2>{cardData.price}/{cardData.unit}</h2>
+	<!--TODO: add upload url to env vars-->
+	<img class="" src={thumbnailUrl} alt="cake_thumbnail" />
+	<h1>{name}</h1>
+	<h2>{price}/{unit}</h2>
 	<div class="flex -mx-2" id="button-container">
 		<Primary>Vezi detalii</Primary>
 		<Secondary>Adauga in cos</Secondary>
