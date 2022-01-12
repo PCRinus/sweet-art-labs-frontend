@@ -5,9 +5,9 @@
 
 	export let cardData;
 
+	let { id } = cardData;
 	let { name, price, unit, image } = cardData.attributes;
 	let thumbnailUrl = `${variables.basePath}${image.data[0].attributes.formats.thumbnail.url}`;
-	console.log(thumbnailUrl);
 </script>
 
 <div class="bg-slate-200 border rounded-sm p-2">
@@ -19,4 +19,5 @@
 		<Primary>Vezi detalii</Primary>
 		<Secondary>Adauga in cos</Secondary>
 	</div>
+	id: {id}
 </div>

@@ -1,6 +1,6 @@
 <script context="module">
 	export const load = async ({ fetch }) => {
-		const res = await fetch('/api/cardData');
+		const res = await fetch('/api/card');
 		const cardData = await res.json();
 
 		return {
@@ -19,7 +19,7 @@
 
 <h1>Prajiturile Noastre</h1>
 <div class="grid gap-4 lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 grid-rows-3">
-	{#each cardData as card}
-		<Card cardData={card} />
+	{#each cardData as data}
+		<Card cardData={data} />
 	{/each}
 </div>
