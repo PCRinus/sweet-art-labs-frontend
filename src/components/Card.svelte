@@ -14,8 +14,8 @@
 	<!--TODO: add upload url to env vars-->
 	<img class="" src={thumbnailUrl} alt="cake_thumbnail" />
 	<h1>{name}</h1>
-	<h2>{price}/{unit}</h2>
-	<div class="flex -mx-2" id="button-container">
+	<h2>{price} lei/{unit}</h2>
+	<div class="flex -mx-2 mt-2" id="button-container">
 		<Primary>Vezi detalii</Primary>
 		<Secondary>Adauga in cos</Secondary>
 	</div>
