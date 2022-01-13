@@ -3,11 +3,8 @@
 
 	let hoursArray = [];
 
-	onMount(async () => {
-		const data = await getContext('contactData');
-		const { address, hours, phone } = data.result.data.attributes;
-		hoursArray = hours.split('\n');
-	});
+	const data = getContext('contactData');
+	console.log(data);
 </script>
 
 <div class="contact my-4">
