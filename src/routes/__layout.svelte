@@ -12,7 +12,7 @@
 <div class="content xl:text-2xl lg:text-xl md:text-lg sm:text-base">
 	<Navbar />
 	<div class="upper-content p-6">
-		<div class="max-w-5xl mx-auto">
+		<div class="max-w-6xl mx-auto">
 			<slot />
 		</div>
 	</div>

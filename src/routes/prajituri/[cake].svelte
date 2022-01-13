@@ -12,12 +12,25 @@
 </script>
 
 <script>
+	import { variables } from '$lib/variables';
+
+	import Price from '../../components/Price.svelte';
 	export let cakeData;
 	const { name, price, unit, cake_info, image, categories, allergens } =
 		cakeData.result.data.attributes;
+	const imgUrl = variables.basePath + image.data[0].attributes.formats.medium.url;
+	console.log(imgUrl);
 </script>
 
-<h1>Cake info</h1>
-<h1>{name}</h1>
-<h1>{price}</h1>
-<h1>{unit}</h1>
+<section class="flex flex-col sm:flex-row gap-6">
+	<div class="cake-image-container max-w-screen-sm">
+		<img src={imgUrl} alt="" />
+	</div>
+	<div class="cake-data-container">
+		<h1 class="text-5xl">{name}</h1>
+		<Price {price} {unit} />
+	</div>
+</section>
+
+<style>
+</style>

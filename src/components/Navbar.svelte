@@ -1,5 +1,5 @@
 <nav class="p-6">
-	<div class="max-w-5xl mx-auto flex justify-between">
+	<div class="max-w-6xl mx-auto flex justify-between">
 		<a href="/">Sweet Art Labs Logo</a>
 		<div id="buttons">
 			<a href="/prajituri" class="mx-2">Prajituri</a>

@@ -17,7 +17,6 @@
 	export let cardData;
 </script>
 
-<h1>Prajiturile Noastre</h1>
 <div class="grid gap-4 lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 grid-rows-3">
 	{#each cardData as data}
 		<Card cardData={data} />

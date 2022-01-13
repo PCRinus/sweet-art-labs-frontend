@@ -1,5 +1,5 @@
 <footer class="footer px-6 py-10 bg-goldCrayola text-slate-900">
-	<div class="max-w-5xl mx-auto">
+	<div class="max-w-6xl mx-auto">
 		<h1>Sweet Art Labs</h1>
 		<h1>Copyright &copy; 2022</h1>
 		<h1>Designed by <a href="https://www.mirceacasapu.com" target="_blank">Mircea Casapu</a></h1>
