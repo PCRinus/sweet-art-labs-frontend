@@ -1,12 +1,12 @@
 <script>
 	import { getContext, onMount } from 'svelte';
 
-  const hoursArray = [];
+	let hoursArray = [];
 
 	onMount(async () => {
-    const data = await getContext('contactData');
-    const { address, hours, phone } = data.result.data.attributes;
-    hoursArray = hours.split('\n');
+		const data = await getContext('contactData');
+		const { address, hours, phone } = data.result.data.attributes;
+		hoursArray = hours.split('\n');
 	});
 </script>
 
