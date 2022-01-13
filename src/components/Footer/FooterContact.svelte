@@ -5,6 +5,8 @@
 
 	const data = getContext('contactData');
 	console.log(data);
+	const { address, phone, hours } = data.result.data.attributes;
+	console.log(address, phone, hours);
 </script>
 
 <div class="contact my-4">
