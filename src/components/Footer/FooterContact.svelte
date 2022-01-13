@@ -1,9 +1,9 @@
 <script>
-	import { getContext } from 'svelte';
+	import { getContext, onMount } from 'svelte';
 
 	const data = getContext('contactData');
-	const { address, hours, phone } = data.result.data.attributes;
-	const hoursArray = hours.split('\n');
+	const { address, phone, hours } = data.result.data.attributes;
+	const hoursArray = hours.split('/n');
 </script>
 
 <div class="contact my-4">
