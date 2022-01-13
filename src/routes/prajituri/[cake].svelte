@@ -19,7 +19,6 @@
 	const { name, price, unit, cake_info, image, categories, allergens } =
 		cakeData.result.data.attributes;
 	const imgUrl = variables.basePath + image.data[0].attributes.formats.medium.url;
-	console.log(imgUrl);
 </script>
 
 <section class="flex flex-col sm:flex-row gap-6">

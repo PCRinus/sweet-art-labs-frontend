@@ -1,15 +1,31 @@
-<script>
-	import Footer from '../components/Footer.svelte';
-	import Navbar from '../components/Navbar/Navbar.svelte';
+<script context="module">
+	export const load = async ({ fetch }) => {
+		const res = await fetch('/api/contact');
+		const data = await res.json();
 
-	import { page } from '$app/stores';
+		return {
+			props: {
+				contactData: data
+			}
+		};
+	};
+</script>
+
+<script>
+	import Footer from '../components/Footer/Footer.svelte';
+	import Navbar from '../components/Navbar/Navbar.svelte';
+	import { setContext } from 'svelte';
+
+	export let contactData;
+
+	setContext('contactData', contactData);
 </script>
 
 <svelte:head>
 	<title>Sweet Art Labs</title>
 </svelte:head>
 
-<div class="content xl:text-2xl lg:text-xl md:text-lg sm:text-base">
+<div class="content text-xl">
 	<Navbar />
 	<div class="upper-content p-6">
 		<div class="max-w-6xl mx-auto">
@@ -20,6 +36,9 @@
 </div>
 
 <style>
+	/* Fonts */
+	@import url('https://fonts.googleapis.com/css2?family=Moon+Dance&family=Satisfy&display=swap');
+
 	@tailwind base;
 	@tailwind components;
 	@tailwind utilities;
