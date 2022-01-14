@@ -7,8 +7,6 @@
 	<div class="max-w-7xl mx-auto">
 		<h1 class="text-5xl font-satisfy">Sweet Art Labs</h1>
 
-		<hr />
-
 		<FooterContact />
 
 		<FooterSocials />

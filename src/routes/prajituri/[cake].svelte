@@ -23,7 +23,7 @@
 
 <section class="flex flex-col sm:flex-row gap-6">
 	<div class="cake-image-container max-w-screen-sm">
-		<img src={imgUrl} alt="" />
+		<img class="rounded-lg" src={imgUrl} alt="" />
 	</div>
 	<div class="cake-data-container">
 		<h1 class="text-5xl">{name}</h1>

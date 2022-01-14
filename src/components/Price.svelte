@@ -10,4 +10,4 @@
 	};
 </script>
 
-<p>{price} lei/{tranlsateUnit(unit)}</p>
+<p class="italic">{price} lei/{tranlsateUnit(unit)}</p>
