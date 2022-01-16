@@ -1,4 +1,5 @@
 <script>
+	import { capitalize } from '$lib/formatters';
 	import { variables } from '$lib/variables';
 	import Primary from './Buttons/Primary.svelte';
 	import Secondary from './Buttons/Secondary.svelte';
@@ -12,12 +13,16 @@
 	let thumbnailAlt = image.data[0].attributes.alternativeText;
 </script>
 
-<div class="bg-slate-200 border rounded-sm flex flex-col">
-	<div class="img-container">
-		<img class="object-contain w-full" src={thumbnailUrl} alt={thumbnailAlt} />
+<div class="bg-zinc-200 rounded-lg flex">
+	<div class="mr-4">
+		<a href={`/prajituri/${id}`}>
+			<img class="rounded-l-lg aspect-[2/3] w-36" src={thumbnailUrl} alt={thumbnailAlt} />
+		</a>
 	</div>
 	<div class="text-container p-2">
-		<h1>{name}</h1>
+		<a href={`/prajituri/${id}`}>
+			<h1 class="text-3xl">{capitalize(name)}</h1>
+		</a>
 		<Price {price} {unit} />
 		<div class="flex -mx-2 mt-2" id="button-container">
 			<Primary>

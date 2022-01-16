@@ -3,11 +3,8 @@
 	export let unit;
 
 	const tranlsateUnit = (unit) => {
-		if (unit !== 'kilogram') {
-			return 'bucată';
-		}
-		return 'kilogram';
+		return unit === 'kilogram' ? 'kilogram' : 'bucată';
 	};
 </script>
 
-<p>{price} lei/{tranlsateUnit(unit)}</p>
+<p class="italic">{price} lei / {tranlsateUnit(unit)}</p>
