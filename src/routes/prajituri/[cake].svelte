@@ -15,11 +15,11 @@
 	import { variables } from '$lib/variables';
 	import { capitalize } from '$lib/formatters';
 
-	import CakeIngredients from '../../components/Cake/CakeIngredients.svelte';
-	import CakeDescription from '../../components/Cake/CakeDescription.svelte';
-	import CakeNutritionalInfo from '../../components/Cake/CakeNutritionalInfo.svelte';
-	import Price from '../../components/Price.svelte';
-	import Primary from '../../components/Buttons/Primary.svelte';
+	import CakeIngredients from '$components/Cake/CakeIngredients.svelte';
+	import CakeDescription from '$components/Cake/CakeDescription.svelte';
+	import CakeNutritionalInfo from '$components/Cake/CakeNutritionalInfo.svelte';
+	import Price from '$components/Price.svelte';
+	import Primary from '$components/Buttons/Primary.svelte';
 
 	import Icon from '@iconify/svelte';
 

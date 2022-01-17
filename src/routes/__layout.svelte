@@ -12,8 +12,8 @@
 </script>
 
 <script>
-	import Footer from '../components/Footer/Footer.svelte';
-	import Navbar from '../components/Navbar/Navbar.svelte';
+	import Footer from '$components/Footer/Footer.svelte';
+	import Navbar from '$components/Navbar/Navbar.svelte';
 	import { setContext } from 'svelte';
 
 	export let contactData;
