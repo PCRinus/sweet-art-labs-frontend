@@ -1,5 +1,6 @@
 <script>
 	import { mobileNavMenu } from '../../store';
+	import CartButton from './CartButton.svelte';
 	import MobileNavButton from './MobileNavButton.svelte';
 
 	const toggleNavbarIfExpanded = () => {
@@ -7,16 +8,19 @@
 	};
 </script>
 
-<nav class="p-4">
+<nav class="px-4 py-2">
 	<div class="md:hidden">
 		<div class="flex justify-between">
-			<a href="/" on:click={toggleNavbarIfExpanded}>Sweet Art Labs Logo</a>
+			<CartButton />
+			<a href="/" on:click={toggleNavbarIfExpanded}>
+				<img class="rounded-full w-12" src="/logo.jpg" alt="logo" />
+			</a>
 			<MobileNavButton />
 		</div>
 	</div>
 
 	<!-- Mobile Nav -->
-	<div class="{$mobileNavMenu === false ? 'hidden' : ''} md:hidden">
+	<div class="{$mobileNavMenu === false ? 'hidden' : ''} md:hidden mt-4">
 		<ul>
 			<li>
 				<a href="/prajituri" on:click={toggleNavbarIfExpanded}>Prajituri</a>

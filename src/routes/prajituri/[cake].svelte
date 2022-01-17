@@ -36,14 +36,17 @@
 
 <!-- Mobile cake screen -->
 <section class="flex flex-col gap-4 md:hidden">
-	<h1 class="text-3xl">{capitalize(name)}</h1>
-	<img class="rounded-md aspect-[1/1] w-full object-cover" src={imgUrl} alt={imgUrl} />
+	<div class="flex">
+		<h1 class="text-4xl text-darkLava font-satisfy mx-auto">{capitalize(name)}</h1>
+	</div>
+	<img class="rounded-sm aspect-[1/1] w-full object-cover" src={imgUrl} alt={imgUrl} />
 	<Price {price} {unit} size={'text-2xl'} />
 	<Primary size={'text-2xl'}>
 		<p slot="text">Adaugă în coș</p>
 	</Primary>
 	<CakeDescription {cake_info} />
 	<CakeIngredients {cake_info} />
+	<CakeNutritionalInfo {cake_info} />
 </section>
 
 <!-- Desktop cake screen -->

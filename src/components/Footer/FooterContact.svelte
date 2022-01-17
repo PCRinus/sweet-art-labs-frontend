@@ -7,7 +7,7 @@
 </script>
 
 <div class="contact my-4">
-	<h1>Adresă: {address}</h1>
+	<h1>{address}</h1>
 	{#each hoursArray as hours}
 		<h1>{hours}</h1>
 	{/each}

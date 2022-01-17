@@ -5,7 +5,7 @@
 
 <footer class="footer px-6 pt-8 bg-goldCrayola text-slate-900">
 	<div class="max-w-7xl mx-auto">
-		<h1 class="text-5xl font-satisfy">Sweet Art Labs</h1>
+		<h1 class="text-4xl font-satisfy">Sweet Art Labs</h1>
 
 		<FooterContact />
 

@@ -1,7 +1,7 @@
 <script>
 	export let cake_info;
 
-	let cakeNutritionalInfo = cake_info.data?.attributes?.cake_ingredients;
+	let cakeNutritionalInfo = cake_info.data?.attributes?.cake_nutritional_value;
 </script>
 
 <section class="my-2">

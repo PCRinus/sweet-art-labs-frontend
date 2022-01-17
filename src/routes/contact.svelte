@@ -2,4 +2,6 @@
 	<title>Sweet Art Labs - Contact</title>
 </svelte:head>
 
-<h1>Contact</h1>
+<div class="flex flex-col">
+	<h1 class="text-darkLava font-satisfy text-4xl mb-4 mx-auto">Contact</h1>
+</div>
