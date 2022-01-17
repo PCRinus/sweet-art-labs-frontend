@@ -13,10 +13,10 @@
 	let thumbnailAlt = image.data[0].attributes.alternativeText;
 </script>
 
-<div class="bg-zinc-200 rounded-lg flex">
+<div class="bg-zinc-200 rounded-md flex">
 	<div class="mr-4">
 		<a href={`/prajituri/${id}`}>
-			<img class="rounded-l-lg aspect-[2/3] w-36" src={thumbnailUrl} alt={thumbnailAlt} />
+			<img class="rounded-l-md aspect-[2/3] w-36" src={thumbnailUrl} alt={thumbnailAlt} />
 		</a>
 	</div>
 	<div class="text-container p-2">

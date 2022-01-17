@@ -4,6 +4,9 @@
 	let cakeDescription = cake_info?.data?.attributes?.cake_description;
 </script>
 
-<h1 class="my-2">
-	{cakeDescription === undefined ? 'Nu există date momentan.' : cakeDescription}
-</h1>
+<section class="my-2">
+	<h1 class="text-darkLava text-2xl">Descriere</h1>
+	<h1>
+		{cakeDescription === undefined ? 'Nu există date momentan.' : cakeDescription}
+	</h1>
+</section>

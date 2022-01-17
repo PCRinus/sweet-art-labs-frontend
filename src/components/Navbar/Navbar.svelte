@@ -1,10 +1,16 @@
 <script>
+	import { mobileNavMenu } from '../../store';
 	import MobileNavButton from './MobileNavButton.svelte';
 
 	let hidden = true;
-	let toggle;
+	let toggle = '';
 
 	$: toggle = hidden === true ? 'hidden' : '';
+
+	const navigate = () => {
+		$mobileNavMenu = !$mobileNavMenu;
+		toggleMobileNav();
+	};
 
 	const toggleMobileNav = () => {
 		hidden = !hidden;
@@ -24,13 +30,13 @@
 		<div class="md:hidden">
 			<ul>
 				<li>
-					<a href="/prajituri" on:click={toggleMobileNav}>Prajituri</a>
+					<a href="/prajituri" on:click={navigate}>Prajituri</a>
 				</li>
 				<li>
-					<a href="/despre-noi" on:click={toggleMobileNav}>Despre Noi</a>
+					<a href="/despre-noi" on:click={navigate}>Despre Noi</a>
 				</li>
 				<li>
-					<a href="/contact" on:click={toggleMobileNav}>Contact</a>
+					<a href="/contact" on:click={navigate}>Contact</a>
 				</li>
 			</ul>
 		</div>

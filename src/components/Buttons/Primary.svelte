@@ -11,7 +11,8 @@
 <button
 	on:click={click}
 	type="button"
-	class="bg-darkLava text-white text-2xl transition hover:scale-105 py-4 rounded-sm"
+	class="flex justify-center content-center gap-2 bg-darkLava text-white text-2xl transition hover:scale-105 py-4 rounded-md"
 >
-	<slot />
+	<slot name="icon" />
+	<slot name="text" />
 </button>
