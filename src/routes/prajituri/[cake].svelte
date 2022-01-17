@@ -33,7 +33,8 @@
 	<title>Sweet Art Labs - {capitalize(name)}</title>
 </svelte:head>
 
-<section class="flex flex-col gap-4 ">
+<!-- Mobile cake screen -->
+<section class="flex flex-col gap-4 md:hidden">
 	<h1 class="text-3xl">{capitalize(name)}</h1>
 	<img class="rounded-md aspect-[1/1] w-full object-cover" src={imgUrl} alt={imgUrl} />
 	<Price {price} {unit} size={'text-2xl'} />
@@ -42,4 +43,18 @@
 	<Primary size={'text-2xl'}>
 		<p slot="text">Adaugă în coș</p>
 	</Primary>
+</section>
+
+<!-- Desktop cake screen -->
+<section class="hidden md:flex gap-8">
+	<img class="rounded-md basis-[37%] aspect-[1/1] w-full object-cover" src={imgUrl} alt={imgUrl} />
+	<div class="flex flex-col">
+		<h1 class="text-darkLava text-3xl mb-2">{capitalize(name)}</h1>
+		<Price {price} {unit} size={'text-2xl'} />
+		<CakeDescription {cake_info} />
+		<Cakeingredients {cake_info} />
+		<Primary size={'text-2xl'}>
+			<p slot="text">Adaugă în coș</p>
+		</Primary>
+	</div>
 </section>
