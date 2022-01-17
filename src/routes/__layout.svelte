@@ -27,7 +27,7 @@
 
 <div class="content text-xl">
 	<Navbar />
-	<div class="upper-content p-6">
+	<div class="upper-content p-4">
 		<div class="max-w-7xl mx-auto">
 			<slot />
 		</div>

@@ -17,7 +17,7 @@
 	};
 </script>
 
-<nav class="p-6">
+<nav class="p-4">
 	<div class="md:hidden">
 		<div class="flex justify-between">
 			<a href="/">Sweet Art Labs Logo</a>
