@@ -14,11 +14,11 @@
 	let thumbnailAlt = image.data[0].attributes.alternativeText;
 
 	const toggleNavbarIfExpanded = () => {
-		$mobileNavMenu = $mobileNavMenu === true ? false : true;
+		$mobileNavMenu = $mobileNavMenu === true ? false : false;
 	};
 </script>
 
-<div class="flex flex-col gap-1 bg-zinc-200 rounded-sm">
+<div class="flex flex-col gap-2 bg-zinc-200 rounded-sm">
 	<a href={`/prajituri/${id}`}>
 		<img
 			class="rounded-sm aspect-[2/2] object-cover w-full"

@@ -22,7 +22,10 @@
 </svelte:head>
 
 <h1 class="text-darkLava text-3xl mb-4">Prăjiturile noastre</h1>
-<div class="grid gap-2 grid-cols-2">
+<div class="grid gap-2 grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5">
+	{#each cardData as data}
+		<Card cardData={data} />
+	{/each}
 	{#each cardData as data}
 		<Card cardData={data} />
 	{/each}
