@@ -1,6 +1,9 @@
 <script>
 	import { mobileNavMenu } from '../../store';
+	import { createEventDispatcher } from 'svelte';
 	import Icon from '@iconify/svelte';
+
+	const dispatch = createEventDispatcher();
 
 	let hidden = true;
 	let hiddenOpen = '';
@@ -11,6 +14,9 @@
 		hiddenOpen = hidden ? '' : 'hidden';
 		hiddenClose = hidden ? 'hidden' : '';
 		$mobileNavMenu = hiddenClose;
+		dispatch('toggleNav', {
+			text: 'Mobile nav toggled'
+		});
 	};
 </script>
 
