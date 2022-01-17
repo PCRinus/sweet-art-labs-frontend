@@ -24,11 +24,11 @@
 			<h1 class="text-3xl">{capitalize(name)}</h1>
 		</a>
 		<Price {price} {unit} />
-		<div class="flex -mx-2 mt-2" id="button-container">
+		<div class="flex flex-col -mx-2 mt-2" id="button-container">
 			<Primary>
 				<a href={`/prajituri/${id}`}>Vezi detalii</a>
 			</Primary>
-			<!-- <Secondary>Adauga in cos</Secondary> -->
+			<Secondary>Adauga in cos</Secondary>
 		</div>
 	</div>
 </div>

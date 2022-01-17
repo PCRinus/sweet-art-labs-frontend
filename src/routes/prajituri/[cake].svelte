@@ -21,19 +21,14 @@
 	import Secondary from '../../components/Buttons/Secondary.svelte';
 	export let cakeData;
 	const { name, price, unit, cake_info, image, categories, allergens } =
-		cakeData.result.data.attributes;
-	const imgUrl = variables.basePath + image.data[0].attributes.formats.medium.url;
+		cakeData?.result?.data?.attributes;
+	const imgUrl = variables.basePath + image.data[0]?.attributes?.formats?.medium?.url;
 </script>
 
-<section class="flex flex-col sm:flex-row gap-12">
-	<div class="cake-image-container max-w-screen-sm">
-		<img src={imgUrl} alt="" />
-	</div>
-	<div class="cake-data-container">
-		<h1 class="text-5xl my-4">{capitalize(name)}</h1>
-		<Price {price} {unit} />
-		<CakeDescription {cake_info} />
-		<Cakeingredients {cake_info} />
-	</div>
-	<Secondary>Adauga in cos</Secondary>
+<section class="flex flex-col gap-4 ">
+	<h1 class="text-4xl">{capitalize(name)}</h1>
+	<img class="rounded-lg aspect-[1/1] w-full object-cover" src={imgUrl} alt={imgUrl} />
+	<Price {price} {unit} />
+	<CakeDescription {cake_info} />
+	<Cakeingredients {cake_info} />
 </section>

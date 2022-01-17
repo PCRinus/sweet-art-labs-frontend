@@ -21,4 +21,7 @@
 	{#each cardData as data}
 		<Card cardData={data} />
 	{/each}
+	{#each cardData as data}
+		<Card cardData={data} />
+	{/each}
 </div>
