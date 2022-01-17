@@ -34,13 +34,12 @@
 </svelte:head>
 
 <section class="flex flex-col gap-4 ">
-	<h1 class="text-4xl">{capitalize(name)}</h1>
+	<h1 class="text-3xl">{capitalize(name)}</h1>
 	<img class="rounded-md aspect-[1/1] w-full object-cover" src={imgUrl} alt={imgUrl} />
-	<Price {price} {unit} />
+	<Price {price} {unit} size={'text-2xl'} />
 	<CakeDescription {cake_info} />
 	<Cakeingredients {cake_info} />
-	<Primary>
-		<!-- <Icon slot="icon" icon="feather:shopping-cart" /> -->
+	<Primary size={'text-2xl'}>
 		<p slot="text">Adaugă în coș</p>
 	</Primary>
 </section>

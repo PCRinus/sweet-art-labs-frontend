@@ -2,18 +2,8 @@
 	import { mobileNavMenu } from '../../store';
 	import MobileNavButton from './MobileNavButton.svelte';
 
-	let hidden = true;
-	let toggle = '';
-
-	$: toggle = hidden === true ? 'hidden' : '';
-
-	const navigate = () => {
-		$mobileNavMenu = !$mobileNavMenu;
-		toggleMobileNav();
-	};
-
-	const toggleMobileNav = () => {
-		hidden = !hidden;
+	const toggleNavbarIfExpanded = () => {
+		$mobileNavMenu = $mobileNavMenu === true ? false : true;
 	};
 </script>
 
@@ -21,25 +11,23 @@
 	<div class="md:hidden">
 		<div class="flex justify-between">
 			<a href="/">Sweet Art Labs Logo</a>
-			<MobileNavButton on:toggleNav={toggleMobileNav} />
+			<MobileNavButton />
 		</div>
 	</div>
 
 	<!-- Mobile Nav -->
-	<div class={toggle}>
-		<div class="md:hidden">
-			<ul>
-				<li>
-					<a href="/prajituri" on:click={navigate}>Prajituri</a>
-				</li>
-				<li>
-					<a href="/despre-noi" on:click={navigate}>Despre Noi</a>
-				</li>
-				<li>
-					<a href="/contact" on:click={navigate}>Contact</a>
-				</li>
-			</ul>
-		</div>
+	<div class="{$mobileNavMenu === false ? 'hidden' : ''} md:hidden">
+		<ul>
+			<li>
+				<a href="/prajituri" on:click={toggleNavbarIfExpanded}>Prajituri</a>
+			</li>
+			<li>
+				<a href="/despre-noi" on:click={toggleNavbarIfExpanded}>Despre Noi</a>
+			</li>
+			<li>
+				<a href="/contact" on:click={toggleNavbarIfExpanded}>Contact</a>
+			</li>
+		</ul>
 	</div>
 
 	<!-- Desktop Nav -->

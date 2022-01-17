@@ -1,13 +1,9 @@
 <script>
 	import { mobileNavMenu } from '../../store';
-	import { createEventDispatcher } from 'svelte';
 	import Icon from '@iconify/svelte';
-
-	const dispatch = createEventDispatcher();
 
 	const morphNavIcon = () => {
 		$mobileNavMenu = !$mobileNavMenu;
-		dispatch('toggleNav');
 	};
 </script>
 
