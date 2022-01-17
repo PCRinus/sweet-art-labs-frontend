@@ -11,6 +11,10 @@
 	};
 </script>
 
+<svelte:head>
+	<title>Sweet Art Labs - Despre noi</title>
+</svelte:head>
+
 <script>
 	export let aboutUsData;
 	const { heading, description } = aboutUsData.result.data.attributes;

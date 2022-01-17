@@ -11,7 +11,7 @@
 <button
 	on:click={click}
 	type="button"
-	class="bg-darkLava text-white transition hover:scale-105 px-2 py-1 rounded-sm"
+	class="bg-darkLava text-white text-2xl transition hover:scale-105 py-4 rounded-sm"
 >
 	<slot />
 </button>

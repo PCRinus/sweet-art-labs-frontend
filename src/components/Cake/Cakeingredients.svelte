@@ -4,6 +4,6 @@
 	let cakeIngredients = cake_info.data?.attributes?.cake_ingredients;
 </script>
 
-<h1 class="my-4">
+<h1 class="my-2">
 	{cakeIngredients === undefined ? 'Nu există date momentan.' : cakeIngredients}
 </h1>
