@@ -3,7 +3,7 @@
 	import MobileNavButton from './MobileNavButton.svelte';
 
 	const toggleNavbarIfExpanded = () => {
-		$mobileNavMenu = $mobileNavMenu === true ? false : true;
+		$mobileNavMenu = $mobileNavMenu === true ? false : false;
 	};
 </script>
 

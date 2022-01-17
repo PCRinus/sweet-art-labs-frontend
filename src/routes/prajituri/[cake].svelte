@@ -15,8 +15,9 @@
 	import { variables } from '$lib/variables';
 	import { capitalize } from '$lib/formatters';
 
-	import Cakeingredients from '../../components/Cake/Cakeingredients.svelte';
+	import CakeIngredients from '../../components/Cake/CakeIngredients.svelte';
 	import CakeDescription from '../../components/Cake/CakeDescription.svelte';
+	import CakeNutritionalInfo from '../../components/Cake/CakeNutritionalInfo.svelte';
 	import Price from '../../components/Price.svelte';
 	import Primary from '../../components/Buttons/Primary.svelte';
 
@@ -38,11 +39,11 @@
 	<h1 class="text-3xl">{capitalize(name)}</h1>
 	<img class="rounded-md aspect-[1/1] w-full object-cover" src={imgUrl} alt={imgUrl} />
 	<Price {price} {unit} size={'text-2xl'} />
-	<CakeDescription {cake_info} />
-	<Cakeingredients {cake_info} />
 	<Primary size={'text-2xl'}>
 		<p slot="text">Adaugă în coș</p>
 	</Primary>
+	<CakeDescription {cake_info} />
+	<CakeIngredients {cake_info} />
 </section>
 
 <!-- Desktop cake screen -->
@@ -51,10 +52,11 @@
 	<div class="flex flex-col">
 		<h1 class="text-darkLava text-3xl mb-2">{capitalize(name)}</h1>
 		<Price {price} {unit} size={'text-2xl'} />
-		<CakeDescription {cake_info} />
-		<Cakeingredients {cake_info} />
 		<Primary size={'text-2xl'}>
 			<p slot="text">Adaugă în coș</p>
 		</Primary>
+		<CakeDescription {cake_info} />
+		<CakeIngredients {cake_info} />
+		<CakeNutritionalInfo {cake_info} />
 	</div>
 </section>
