@@ -35,4 +35,6 @@
 			</Primary>
 		</div>
 	</div>
+
+  <h1 class="text-4xl text-darkLava font-satisfy mx-auto">Produse noi</h1>
 </div>

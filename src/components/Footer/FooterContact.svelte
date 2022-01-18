@@ -6,7 +6,7 @@
 	const hoursArray = hours.split('\n');
 </script>
 
-<div class="contact my-4">
+<div class="contact text-base my-4">
 	<h1>{address}</h1>
 	{#each hoursArray as hours}
 		<h1>{hours}</h1>

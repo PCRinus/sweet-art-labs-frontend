@@ -3,7 +3,7 @@
 	import FooterSocials from './FooterSocials.svelte';
 </script>
 
-<footer class="footer px-6 pt-8 bg-goldCrayola text-slate-900">
+<footer class="footer p-4 bg-darkLava text-slate-50">
 	<div class="max-w-7xl mx-auto">
 		<h1 class="text-4xl font-satisfy">Sweet Art Labs</h1>
 
@@ -11,7 +11,7 @@
 
 		<FooterSocials />
 
-		<div class="rights flex flex-col text-sm my-6">
+		<div class="rights flex flex-col text-xs mt-4">
 			<h1 class="mx-auto">&copy; Sweet Art Labs 2022</h1>
 			<h1 class="mx-auto">
 				Designed by <a href="https://www.mirceacasapu.com" target="_blank">Mircea Casapu</a>
