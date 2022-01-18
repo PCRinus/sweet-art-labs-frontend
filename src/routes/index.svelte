@@ -13,18 +13,22 @@
 
 <script>
 	import { variables } from '$lib/variables';
-	import { capitalize } from '$lib/formatters';
 	import Primary from '$components/Buttons/Primary.svelte';
+	import Card from '$components/Card.svelte';
+	import Secondary from '$components/Buttons/Secondary.svelte';
 
 	export let homepage;
 
-	const { intro, banner_photo } = homepage?.result?.data?.attributes;
+	const [homepageData, productsData] = homepage.result;
+
+	const { intro, banner_photo } = homepageData?.data?.attributes;
+	const cardData = productsData?.data;
+
 	const bannerUrl = variables.basePath + banner_photo?.data?.attributes?.formats?.large?.url;
 	const bannerAlt = banner_photo?.data?.attributes?.alternativeText;
-	// const titileArray = title.split('\n');
 </script>
 
-<div class="flex flex-col gap-4">
+<div class="flex flex-col gap-6">
 	<h1 class="text-4xl text-darkLava font-satisfy mx-auto">Sweet Art Labs</h1>
 
 	<div class="relative">
@@ -36,5 +40,15 @@
 		</div>
 	</div>
 
-  <h1 class="text-4xl text-darkLava font-satisfy mx-auto">Produse noi</h1>
+	<h1 class="text-4xl text-darkLava font-satisfy mx-auto">Produse noi</h1>
+
+	<div class="grid gap-2 grid-cols-2">
+		{#each cardData as data}
+			<Card cardData={data} />
+		{/each}
+	</div>
+
+	<Secondary>
+		<a slot="text" href="/contact">Contactează-ne</a>
+	</Secondary>
 </div>

@@ -14,7 +14,7 @@
 <button
 	on:click={click}
 	type="button"
-	class="flex justify-center bg-powderBlue-500 text-black transition hover:scale-105 {paddingY} rounded-sm {size}"
+	class="flex justify-center bg-goldCrayola text-black transition hover:scale-105 {paddingY} rounded-sm {size}"
 >
 	<slot name="icon" />
 	<slot name="text" />

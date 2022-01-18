@@ -26,7 +26,7 @@
 			alt={thumbnailAlt}
 		/>
 	</a>
-	<div class="flex flex-col gap-2 p-2">
+	<div class="flex flex-col gap-2 px-2 pb-2">
 		<a href={`/prajituri/${id}`}>
 			<h1 class="text-xl">{capitalize(name)}</h1>
 		</a>
