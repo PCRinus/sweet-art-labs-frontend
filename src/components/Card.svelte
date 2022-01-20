@@ -1,17 +1,20 @@
 <script>
 	import { capitalize } from '$lib/formatters';
 	import { variables } from '$lib/variables';
-	import { mobileNavMenu } from '../store';
+	import { mobileNavMenu } from '$lib/store';
 	import Primary from './Buttons/Primary.svelte';
 	import Secondary from './Buttons/Secondary.svelte';
 	import Price from './Price.svelte';
+	import Tags from './Tags.svelte';
 
 	export let cardData;
 
 	let { id } = cardData;
-	let { name, price, unit, image } = cardData.attributes;
+	let { name, price, unit, image, allergens, categories } = cardData.attributes;
 	let thumbnailUrl = `${variables.basePath}${image.data[0].attributes.formats.small.url}`;
 	let thumbnailAlt = image.data[0].attributes.alternativeText;
+	console.log(allergens);
+	console.log(categories);
 
 	const toggleNavbarIfExpanded = () => {
 		$mobileNavMenu = $mobileNavMenu === true ? false : false;
@@ -31,6 +34,11 @@
 			<h1 class="text-xl">{capitalize(name)}</h1>
 		</a>
 		<Price {price} {unit} size={'text-lg'} />
+		<div class="flex">
+			{#each allergens.data as allergen}
+				<Tags tagText={allergen.attributes.name} />
+			{/each}
+		</div>
 		<Secondary size={'text-lg'} paddingY={'py-2'} on:secondaryClick={toggleNavbarIfExpanded}>
 			<a slot="text" href={`/prajituri/${id}`}>Vezi detalii</a>
 		</Secondary>

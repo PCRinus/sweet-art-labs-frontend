@@ -1,5 +1,5 @@
 <script>
-	import { mobileNavMenu } from '../../store';
+	import { mobileNavMenu } from '$lib/store';
 	import Icon from '@iconify/svelte';
 
 	const morphNavIcon = () => {
