@@ -3,7 +3,7 @@
 	import Price from '$components/Price.svelte';
 	import Secondary from '$components/Buttons/Secondary.svelte';
 	import Primary from '$components/Buttons/Primary.svelte';
-	import { capitalize } from '$lib/formatters';
+	import { capitalize } from '$lib/utils';
 	import { mobileNavMenu } from '$lib/store';
 
 	export let newProducts;

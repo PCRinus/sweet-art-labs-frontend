@@ -1,7 +1,8 @@
 <script context="module">
 	export const load = async ({ fetch }) => {
-		const res = await fetch('/api/card');
+		const res = await fetch('/api/cakeList');
 		const cardData = await res.json();
+		// console.log(cardData);
 
 		return {
 			props: {
@@ -17,9 +18,11 @@
 	import Card from '$components/Card.svelte';
 	import Price from '$components/Price.svelte';
 	import { mobileNavMenu } from '$lib/store';
-	import { capitalize } from '$lib/formatters';
+	import { capitalize } from '$lib/utils';
 
 	export let cardData;
+
+  // console.log(cardData);
 
 	const toggleNavbarIfExpanded = () => {
 		$mobileNavMenu = $mobileNavMenu === true ? false : false;
