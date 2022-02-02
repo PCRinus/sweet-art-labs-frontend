@@ -2,7 +2,6 @@
 	export const load = async ({ fetch }) => {
 		const res = await fetch('/api/cakeList');
 		const cardData = await res.json();
-		// console.log(cardData);
 
 		return {
 			props: {
@@ -21,8 +20,6 @@
 	import { capitalize } from '$lib/utils';
 
 	export let cardData;
-
-  // console.log(cardData);
 
 	const toggleNavbarIfExpanded = () => {
 		$mobileNavMenu = $mobileNavMenu === true ? false : false;
