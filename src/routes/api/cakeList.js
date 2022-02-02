@@ -1,8 +1,9 @@
 import { variables } from '$lib/variables';
 
 export const get = async () => {
-	const url = variables.apiPath + '/address';
-	const data = await fetch(url);
+	const data = await fetch(
+		variables.apiPath + '/cakes?fields=name,price,unit&populate=image,allergens,categories'
+	);
 	const result = await data.json();
 
 	if (result) {

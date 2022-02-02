@@ -8,11 +8,15 @@ export const get = async ({ params }) => {
 	const data = await fetch(url);
 	const result = await data.json();
 
-	return {
-		body: {
-			result
-		}
-	};
+	if (result) {
+		return {
+			body: {
+				result
+			}
+		};
+	}
 
-	return {};
+	return {
+		status: 404
+	};
 };

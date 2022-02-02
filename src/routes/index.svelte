@@ -19,8 +19,8 @@
 	export let homepage;
 
 	const [homepageData, productsData] = homepage.result;
-	console.log(homepageData);
-	console.log(productsData);
+	// console.log(homepageData);
+	// console.log(productsData);
 
 	const { intro, banner_photo } = homepageData?.data?.attributes;
 	const bannerUrl = banner_photo?.data?.attributes?.formats?.large?.url;

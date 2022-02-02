@@ -9,9 +9,15 @@ export const get = async () => {
 	);
 	const result = [await homepageData.json(), await newCakesData.json()];
 
+	if (result) {
+		return {
+			body: {
+				result
+			}
+		};
+	}
+
 	return {
-		body: {
-			result
-		}
+		status: 404
 	};
 };

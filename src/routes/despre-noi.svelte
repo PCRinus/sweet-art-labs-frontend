@@ -17,9 +17,9 @@
 	export let aboutUsData;
 	const { heading, description } = aboutUsData.result.data.attributes;
 
-	onMount(async () => {
-		console.log('lalalal');
-	});
+	// onMount(async () => {
+	// 	console.log('lalalal');
+	// });
 </script>
 
 <svelte:head>

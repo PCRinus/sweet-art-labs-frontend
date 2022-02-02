@@ -1,0 +1,17 @@
+<script context="module">
+	export const load = ({ error, status }) => {
+		console.log(error);
+
+		return {
+			props: {
+				title: `${status}: ${error.message}`
+			}
+		};
+	};
+</script>
+
+<script>
+	export let title;
+</script>
+
+<h1>{title}</h1>
