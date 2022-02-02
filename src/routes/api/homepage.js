@@ -7,12 +7,6 @@ export const get = async () => {
 	const newCakesData = await fetch(
 		variables.apiPath + '/cakes?fields=name,price,unit&populate=image'
 	);
-
-	// const data = await Promise.all([
-	// 	fetch(variables.apiPath + '/homepage?fields=intro&populate=banner_photo'),
-	// 	fetch(variables.apiPath + '/cakes?fields=name,price,unit&populate=image')
-	// ]);
-
 	const result = [await homepageData.json(), await newCakesData.json()];
 
 	return {

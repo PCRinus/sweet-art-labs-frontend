@@ -12,22 +12,19 @@
 </script>
 
 <script>
-	import { variables } from '$lib/variables';
-	import { capitalize } from '$lib/formatters';
-
 	import CakeIngredients from '$components/Cake/CakeIngredients.svelte';
 	import CakeDescription from '$components/Cake/CakeDescription.svelte';
 	import CakeNutritionalInfo from '$components/Cake/CakeNutritionalInfo.svelte';
 	import Price from '$components/Price.svelte';
 	import Primary from '$components/Buttons/Primary.svelte';
-
-	import Icon from '@iconify/svelte';
+	import { capitalize } from '$lib/formatters';
 
 	export let cakeData;
 
 	const { name, price, unit, cake_info, image, categories, allergens } =
 		cakeData?.result?.data?.attributes;
-	const imgUrl = variables.basePath + image.data[0]?.attributes?.formats?.medium?.url;
+	const imgUrl = image.data[0]?.attributes?.formats?.medium?.url;
+	console.log(imgUrl);
 </script>
 
 <svelte:head>
