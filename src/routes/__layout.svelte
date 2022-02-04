@@ -43,18 +43,13 @@
 	@tailwind components;
 	@tailwind utilities;
 
-	@layer base {
-		html {
-			-webkit-tap-highlight-color: transparent;
-		}
-	}
-
 	:global(body) {
 		@apply bg-neutral-50;
 	}
 
 	:global(html, body, #svelte, .content) {
 		height: 100%;
+		-webkit-tap-highlight-color: rgba(255, 255, 255, 0);
 	}
 
 	.content {
