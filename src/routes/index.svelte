@@ -15,6 +15,9 @@
 	import Primary from '$components/Buttons/Primary.svelte';
 	import Secondary from '$components/Buttons/Secondary.svelte';
 	import NewProducts from '$components/Homepage/NewProducts.svelte';
+	import Glide from '@glidejs/glide';
+
+	new Glide('.glide').mount();
 
 	export let homepage;
 

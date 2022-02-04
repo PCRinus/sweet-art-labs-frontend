@@ -1,4 +1,4 @@
-<div class="hidden md:flex justify-between max-w-7xl mx-auto">
+<div class="hidden md:flex justify-between max-w-6xl mx-auto">
 	<a href="/">Sweet Art Labs Logo</a>
 	<div id="nav-links">
 		<a href="/prajituri" class="mx-2">Prajituri</a>

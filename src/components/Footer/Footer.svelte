@@ -4,7 +4,7 @@
 </script>
 
 <footer class="footer p-4 bg-darkLava text-slate-50">
-	<div class="max-w-7xl mx-auto">
+	<div class="max-w-6xl mx-auto">
 		<h1 class="text-4xl font-satisfy">Sweet Art Labs</h1>
 
 		<FooterContact />
