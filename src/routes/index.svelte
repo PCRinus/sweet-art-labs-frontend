@@ -1,11 +1,12 @@
 <script context="module">
 	export const load = async ({ fetch }) => {
 		const res = await fetch('/api/homepage');
-		const data = await res.json();
+		const [homepageData, newCakesData] = await res.json();
 
 		return {
 			props: {
-				homepage: data
+				homepageData,
+				productsData: newCakesData
 			}
 		};
 	};
@@ -16,9 +17,8 @@
 	import Secondary from '$components/Buttons/Secondary.svelte';
 	import NewProducts from '$components/Homepage/NewProducts.svelte';
 
-	export let homepage;
-
-	const [homepageData, productsData] = homepage.result;
+	export let homepageData;
+	export let productsData;
 
 	const { intro, banner_photo } = homepageData?.data?.attributes;
 	const bannerUrl = banner_photo?.data?.attributes?.formats?.large?.url;
